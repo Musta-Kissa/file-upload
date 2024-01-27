@@ -9,4 +9,6 @@ The password has to be hashed using the `md5` php function.
 Uploaded files will be stored in `./uploads/{username}/`
 ### Troubleshooting 
 If the files aren't being saved it might be because the web server doesn't have write permissions it the `uploads` folder
+## Screenshots
+![Screenshot](./img/file-upload.png)
 
