@@ -10,5 +10,8 @@ Uploaded files will be stored in `./uploads/{username}/`
 ### Troubleshooting 
 If the files aren't being saved it might be because the web server doesn't have write permissions it the `uploads` folder
 ## Screenshots
+### login.php
+![Screenshot](./img/login.png)
+### file-upload.php
 ![Screenshot](./img/file-upload.png)
 
