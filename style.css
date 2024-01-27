@@ -1,0 +1,23 @@
+html, body {
+  background-color: #181a1b;
+  border-color: rgb(106, 98, 87);
+  color: rgb(216, 212, 207);
+}
+div.in_dir {
+  padding-left: 1.5rem;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #66b8ff;
+}
+a:hover {
+  color: hotpink;
+}
+a:link {
+  text-decoration: none;
+}
+html {
+  color-scheme: dark !important;
+}

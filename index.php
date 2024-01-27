@@ -1,7 +1,7 @@
 <?php
   session_start();
   if($_SESSION['logged-in'] == true){
-    header('Location: ./upload_file.php');
+    header('Location: ./file-upload.php');
   }else {
     header('Location: ./login.php');
   }

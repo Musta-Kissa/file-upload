@@ -1,11 +1,16 @@
 <?php
   session_start();
+  if(isset($_POST["logout"])){
+    unset($_SESSION["logged-in"],
+          $_SESSION["username"],
+          $_POST["logout"]);
+  }
 ?>
 <!DOCTYPE html>
 <html>
    <head>
+    <link rel="stylesheet" href="style.css">
    </head>
-
   <body>
     <p><b>Login</b></p>
     <form action="" method="post">
@@ -32,7 +37,7 @@
         if(md5($_POST['password']) == $passwords[$_POST['username']]){
           $_SESSION['logged-in'] = true;
           $_SESSION['username'] = $_POST["username"];
-          header("Location: ./index.php");
+          header("Location: ./file-upload.php");
         }else {
           echo "<p>Wrong username or password</p>";
         }
@@ -41,8 +46,11 @@
           ($_SESSION['logged-in'] == true 
           ? (
             "true - " . $_SESSION["username"] .
-            "<form action=\"./upload_file.php\">
+            "<form action=\"./file-upload.php\" style=\"float:left;padding-right:5px;\">
               <input type=\"submit\" value=\"Go to upload\">
+            </form>
+            <form action=\"\" method=\"post\">
+              <input type=\"submit\" name=\"logout\" value=\"Logout\">
             </form>"
           ) 
           : "false"
